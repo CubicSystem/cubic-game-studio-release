@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Game Studio</title>
+    <link rel="stylesheet" href="./studio.css" />
+  </head>
+  <body>
+    <div class="app">
+      <nav class="rail" id="rail" aria-label="메뉴"></nav>
+      <aside class="side" aria-label="워크트리">
+        <div class="side-head">
+          <b>Game Studio</b><span class="grow"></span>
+          <button id="fetch" class="icon-btn" title="원격 브랜치 받아오기 (git fetch)"></button>
+          <button id="refresh" class="icon-btn" title="워크트리 새로고침"></button>
+        </div>
+        <div class="project-name mono" id="project"></div>
+        <div class="section">메인 워크트리</div>
+        <div id="tree-main"></div>
+        <div class="section">서브 워크트리 <span id="sub-count"></span></div>
+        <div id="tree-sub"></div>
+      </aside>
+      <main class="main">
+        <div class="main-body">
+          <section class="view" id="view-home"><div class="detail" id="detail"></div></section>
+          <section class="view" id="view-game"></section>
+          <section class="view" id="view-page"></section>
+          <p class="foot" id="foot" role="status"></p>
+        </div>
+        <div class="context" id="context" aria-label="현재 대상"></div>
+      </main>
+    </div>
+    <script type="module" src="./studio.js"></script>
+  </body>
+</html>

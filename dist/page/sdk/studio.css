@@ -1,0 +1,31 @@
+/* Studio look for project pages: link /sdk/studio.css. Colours follow the studio shell, light and dark. */
+:root {
+  --bg: #ffffff; --panel: #faf8f6; --hover: #efebe6; --line: #e6e1db; --text: #22201d; --muted: #8a847d; --faint: #b3ada6;
+  --accent: #d9792b; --ok: #2f9a5d; --warn: #c08422; --info: #4f7fd1; --danger: #c0513f; --chip: #f4f1ed;
+  --sans: "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans KR", system-ui, sans-serif;
+  --mono: ui-monospace, "Cascadia Code", Consolas, "SF Mono", monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    color-scheme: dark;
+    --bg: #1b1b1d; --panel: #202023; --hover: #2a2a2e; --line: #2e2e33; --text: #e7e5e2; --muted: #9a958f; --faint: #6c6863;
+    --accent: #f0a05a; --ok: #5cc28a; --warn: #e0b04f; --info: #7da3e8; --danger: #e07a66; --chip: #26262a;
+  }
+}
+* { box-sizing: border-box; }
+body { margin: 0; padding: 24px 28px; background: var(--bg); color: var(--text); font-family: var(--sans); font-size: 14px; line-height: 1.5; }
+h1 { font-size: 20px; font-weight: 600; margin: 0 0 12px; }
+h2 { font-size: 16px; font-weight: 600; margin: 20px 0 8px; }
+p { margin: 0 0 10px; }
+a { color: var(--accent); }
+code, pre, .mono { font-family: var(--mono); font-size: 12px; }
+pre { background: var(--chip); border-radius: 8px; padding: 10px; overflow: auto; }
+button, .button { font: inherit; color: var(--text); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 5px 12px; cursor: pointer; }
+button.primary, .button.primary { background: var(--text); border-color: var(--text); color: var(--bg); }
+button:disabled { opacity: 0.4; cursor: default; }
+input, select, textarea { font: inherit; color: var(--text); background: var(--bg); border: 1px solid var(--line); border-radius: 8px; padding: 5px 8px; }
+.card { border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; background: var(--bg); }
+.muted { color: var(--muted); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+@media (max-width: 640px) { body { padding: 16px; } }

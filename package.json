@@ -1,6 +1,6 @@
 {
   "name": "@cubicsystem/cubic-game-studio",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "private": true,
   "description": "Local development studio for game projects: a shell with worktree status and a game runner, whose menu and pages each project can replace or extend.",
   "type": "module",
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/CubicSystem/cubic-game-studio.git"
+    "url": "https://github.com/CubicSystem/cubic-game-studio-release.git"
   },
   "license": "UNLICENSED"
 }

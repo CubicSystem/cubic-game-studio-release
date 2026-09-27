@@ -1,7 +1,7 @@
 <!-- Managed by cubic-game-studio {{version}}. Changes here are overwritten; `game-studio init` refreshes this file. -->
 # Studio folder
 
-This folder configures the project's [development studio](https://github.com/CubicSystem/cubic-game-studio). The studio is a shell with a menu, the worktree list and the current target. The pages behind its menu can be replaced or added per project.
+This folder configures the project's [development studio](https://github.com/CubicSystem/cubic-game-studio-release). The studio is a shell with a menu, the worktree list and the current target. The pages behind its menu can be replaced or added per project.
 
 | Path | Owner | Purpose |
 |---|---|---|
@@ -13,7 +13,7 @@ The studio's agent skills (`.agents/skills/studio*/`, `.claude/skills/studio*/`)
 
 ## Running the studio
 
-Run `npm run studio` when the project defines that script, otherwise `npx -y "github:CubicSystem/cubic-game-studio#semver:*"`. Settings and pages are read on every request, so edits and branch switches apply after a refresh, without a restart.
+Run `npm run studio` when the project defines that script, otherwise `npx -y "github:CubicSystem/cubic-game-studio-release#semver:*"`. Settings and pages are read on every request, so edits and branch switches apply after a refresh, without a restart.
 
 ## Settings
 

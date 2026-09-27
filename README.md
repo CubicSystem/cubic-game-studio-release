@@ -9,13 +9,13 @@ It is a standalone tool: it needs Node and Git, not a particular game engine or 
 Run it inside the repository:
 
 ```sh
-npx -y "github:CubicSystem/cubic-game-studio#semver:*"
+npx -y "github:CubicSystem/cubic-game-studio-release#semver:*"
 ```
 
 npm downloads the latest release straight from this public GitHub repository and runs it. No npm registry, account or token is involved. `#semver:*` means the highest release tag, such as `v0.2.0`. A project usually adds it as a script, so every run uses the latest release without a dependency or lockfile entry:
 
 ```json
-"scripts": { "studio": "npx -y \"github:CubicSystem/cubic-game-studio#semver:*\"" }
+"scripts": { "studio": "npx -y \"github:CubicSystem/cubic-game-studio-release#semver:*\"" }
 ```
 
 Use `#main` instead to follow every commit on `main`, or `#v0.2.0` to pin a release. The first run of a new release downloads and builds it; later runs reuse npm's cache.

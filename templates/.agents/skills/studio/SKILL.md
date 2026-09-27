@@ -6,7 +6,7 @@ description: Open this project's development studio (worktree list, game runner,
 
 # Open the development studio
 
-The development studio is the separate cubic-game-studio tool, configured by [`studio/`](../../../studio/README.md). Below, `STUDIO` means `npm run studio --` when `package.json` defines a `studio` script, otherwise `npx -y "github:CubicSystem/cubic-game-studio#semver:*"`. Work in the current checkout and inspect its path and branch. Opening the studio does not create or switch worktrees or branches.
+The development studio is the separate cubic-game-studio tool, configured by [`studio/`](../../../studio/README.md). Below, `STUDIO` means `npm run studio --` when `package.json` defines a `studio` script, otherwise `npx -y "github:CubicSystem/cubic-game-studio-release#semver:*"`. Work in the current checkout and inspect its path and branch. Opening the studio does not create or switch worktrees or branches.
 
 ## Find or start the studio
 

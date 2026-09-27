@@ -1,6 +1,6 @@
 {
   "name": "@cubicsystem/cubic-game-studio",
-  "version": "0.2.2",
+  "version": "0.3.0",
   "private": true,
   "description": "Local development studio for game projects: a shell with worktree status and a game runner, whose menu and pages each project can replace or extend.",
   "type": "module",

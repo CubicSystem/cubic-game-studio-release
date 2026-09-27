@@ -12,6 +12,8 @@ import { LOCAL_HOSTS, hostName, openInBrowser } from './net.mjs';
 
 /** The built shell page and SDK (`npm run build`), shipped in the package. */
 export const PAGE_DIR = fileURLToPath(new URL('../dist/page/', import.meta.url));
+/** The studio's release, shown in the page. */
+export const VERSION = JSON.parse(readFileSync(new URL('../package.json', import.meta.url), 'utf8')).version;
 const SHELL_FILES = {
   '/': 'index.html', '/studio.js': 'studio.js', '/studio.css': 'studio.css',
   '/sdk/studio.js': 'sdk/studio.js', '/sdk/studio.css': 'sdk/studio.css',
@@ -143,7 +145,7 @@ export function createStudio({ root, configFile, pageDir = PAGE_DIR, games = new
     const current = list.find(item => !item.missing && sameDirectory(item.path, root));
     if (req.method === 'GET' && route === 'state') {
       send(res, 200, {
-        root, baseBranch: config.baseBranch, gameSize: config.game.size, menus: resolveMenus(config), configError,
+        version: VERSION, root, baseBranch: config.baseBranch, gameSize: config.game.size, menus: resolveMenus(config), configError,
         worktrees: list.map(item => ({ ...item, id: worktreeId(item.path), current: item === current, game: games.view(item.path) })),
       });
     } else if (req.method === 'POST' && (route === 'game/start' || route === 'game/stop')) {

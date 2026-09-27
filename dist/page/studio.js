@@ -69,6 +69,10 @@ var count = (item, kind) => item.files.filter((file) => file.kind === kind).leng
 async function refresh(quiet = false) {
   try {
     state = await api("state");
+    const version = $("#version");
+    version.textContent = `v${state.version}`;
+    version.title = `cubic-game-studio ${state.version}`;
+    version.hidden = false;
     document.documentElement.style.setProperty("--game-w", String(state.gameSize[0]));
     document.documentElement.style.setProperty("--game-h", String(state.gameSize[1]));
     if (!state.worktrees.some((item) => item.path === selectedPath)) selectedPath = state.worktrees.find((item) => item.current)?.path ?? state.worktrees[0]?.path ?? "";
